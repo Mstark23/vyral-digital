@@ -31,38 +31,38 @@ faqItems.forEach(item => {
     });
 });
 
-// Form submission handler
-const contactForm = document.getElementById('contact-form');
+// Email Signup Form Handler
+const signupForm = document.getElementById('signup-form');
 
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
+if (signupForm) {
+    signupForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
-        // Get form data
-        const formData = new FormData(this);
-        const data = Object.fromEntries(formData);
+        const email = document.getElementById('signup-email').value;
         
-        // Here you would typically send the data to your server
-        console.log('Form submitted:', data);
+        // Here you would typically send the email to your backend
+        console.log('Email signup:', email);
         
-        // Show success message (you can customize this)
-        alert('Thank you! We\'ll have your website preview ready in 60 minutes. Check your email for the preview link.');
+        // Show success message
+        alert(`Thanks for signing up! Check ${email} for your confirmation link.`);
         
         // Reset form
         this.reset();
         
-        // In a real application, you would send this to your backend:
-        // fetch('/api/submit-form', {
+        // In production, you would integrate with your email service:
+        // fetch('/api/signup', {
         //     method: 'POST',
         //     headers: {
         //         'Content-Type': 'application/json',
         //     },
-        //     body: JSON.stringify(data)
+        //     body: JSON.stringify({ email: email })
         // })
         // .then(response => response.json())
         // .then(data => {
-        //     alert('Success! Check your email for the preview link.');
-        //     this.reset();
+        //     if (data.success) {
+        //         alert('Success! Check your email for next steps.');
+        //         this.reset();
+        //     }
         // })
         // .catch(error => {
         //     alert('Oops! Something went wrong. Please try again.');
@@ -98,23 +98,18 @@ const pricingButtons = document.querySelectorAll('.plan-cta');
 
 pricingButtons.forEach(button => {
     button.addEventListener('click', () => {
-        // Scroll to the form
-        const form = document.getElementById('try-free');
-        if (form) {
-            form.scrollIntoView({ behavior: 'smooth' });
+        // Scroll to the signup form
+        const signupSection = document.getElementById('signup');
+        if (signupSection) {
+            signupSection.scrollIntoView({ behavior: 'smooth' });
             
-            // Optionally pre-select the plan in the form
-            const planText = button.closest('.pricing-card').querySelector('.plan-name').textContent;
-            const planSelect = document.getElementById('plan');
-            if (planSelect) {
-                const options = Array.from(planSelect.options);
-                const matchingOption = options.find(opt => 
-                    opt.textContent.toLowerCase().includes(planText.toLowerCase())
-                );
-                if (matchingOption) {
-                    planSelect.value = matchingOption.value;
+            // Focus on email input after scroll
+            setTimeout(() => {
+                const emailInput = document.getElementById('signup-email');
+                if (emailInput) {
+                    emailInput.focus();
                 }
-            }
+            }, 800);
         }
     });
 });
@@ -139,3 +134,25 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Email validation helper
+function isValidEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+}
+
+// Add real-time email validation
+const emailInput = document.getElementById('signup-email');
+if (emailInput) {
+    emailInput.addEventListener('blur', function() {
+        if (this.value && !isValidEmail(this.value)) {
+            this.style.borderColor = '#ef4444';
+        } else {
+            this.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        }
+    });
+    
+    emailInput.addEventListener('input', function() {
+        this.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+    });
+}

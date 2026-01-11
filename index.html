@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Get a professionally designed, AI-powered website built in 60 minutes. See it live. Love it? Pay for it. Don't love it? Walk away.">
     <meta name="keywords" content="website builder, AI website, professional website, web design">
-    <title>WebForge AI - Get Your Website Built Free. Pay Only If You Love It.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Bodoni+Moda:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <title>VektorLabs.ai - Get Your Website Built Free. Pay Only If You Love It.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="nav-container">
-            <div class="logo">WebForge<span>AI</span></div>
+            <div class="logo">VektorLabs<span>.ai</span></div>
             <nav>
                 <ul>
                     <li><a href="#how">How It Works</a></li>
                     <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#examples">Examples</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#try-free" class="nav-cta">Try Free</a></li>
+                    <li><a href="#signup" class="nav-cta">Get Started</a></li>
                 </ul>
             </nav>
         </div>
@@ -34,8 +34,8 @@
             <p class="hero-subtitle">Get a professionally designed, AI-powered website built in 60 minutes. See it live. Love it? Pay for it. Don't love it? Walk away. Zero risk. Maximum results.</p>
             
             <div class="hero-cta-group">
-                <a href="#try-free" class="btn btn-primary">Get Started Free</a>
-                <a href="#examples" class="btn btn-secondary">See Examples</a>
+                <a href="#signup" class="btn btn-primary">Get Started Free</a>
+                <a href="#how" class="btn btn-secondary">Learn How</a>
             </div>
             
             <div class="hero-stats">
@@ -67,8 +67,8 @@
             <div class="steps-grid">
                 <div class="step-card">
                     <div class="step-number">1</div>
-                    <h3>Fill Out Form</h3>
-                    <p>Tell us about your business, brand colors, and what you need. Takes 5 minutes.</p>
+                    <h3>Sign Up</h3>
+                    <p>Create your account with just your email. Takes 30 seconds.</p>
                 </div>
                 
                 <div class="step-card">
@@ -104,7 +104,7 @@
             <div class="pricing-grid">
                 <!-- Basic Plan -->
                 <div class="pricing-card">
-                    <div class="plan-name">Basic</div>
+                    <div class="plan-name">Starter</div>
                     <div class="plan-price">$299<small>/one-time</small></div>
                     <p class="plan-description">Perfect for solo entrepreneurs and small local businesses</p>
                     
@@ -124,7 +124,7 @@
                 <div class="pricing-card featured">
                     <div class="plan-name">Professional</div>
                     <div class="plan-price">$599<small>/one-time</small></div>
-                    <p class="plan-description">For growing businesses and restaurants that need more</p>
+                    <p class="plan-description">For growing businesses that need more functionality</p>
                     
                     <ul class="plan-features">
                         <li><span class="check-icon">✓</span> Multi-page (5-8 pages)</li>
@@ -141,7 +141,7 @@
                 
                 <!-- Premium Plan -->
                 <div class="pricing-card">
-                    <div class="plan-name">Premium</div>
+                    <div class="plan-name">Enterprise</div>
                     <div class="plan-price">$999<small>/one-time</small></div>
                     <p class="plan-description">Full custom websites for established businesses and e-commerce</p>
                     
@@ -161,98 +161,42 @@
         </div>
     </section>
 
-    <!-- Try Free Form -->
-    <section class="try-free" id="try-free">
-        <div class="form-container">
-            <div class="form-header">
-                <h2>Get Your Free Website Preview</h2>
-                <p>Fill out this form and we'll have your website ready to preview in 60 minutes</p>
+    <!-- Email Signup Section -->
+    <section class="signup-section" id="signup">
+        <div class="signup-container">
+            <div class="signup-content">
+                <div class="signup-badge">Get Started in 30 Seconds</div>
+                <h2>Create Your Free Account</h2>
+                <p>No credit card required. Get your website preview in under 60 minutes.</p>
+                
+                <form id="signup-form" class="signup-form">
+                    <div class="form-row">
+                        <input type="email" id="signup-email" name="email" placeholder="Enter your email address" required>
+                        <button type="submit" class="btn btn-primary">Get Started →</button>
+                    </div>
+                    <p class="signup-disclaimer">By signing up, you agree to our Terms of Service and Privacy Policy</p>
+                </form>
+
+                <div class="signup-features">
+                    <div class="signup-feature">
+                        <span class="feature-icon">⚡</span>
+                        <span>60-minute turnaround</span>
+                    </div>
+                    <div class="signup-feature">
+                        <span class="feature-icon">💳</span>
+                        <span>No credit card needed</span>
+                    </div>
+                    <div class="signup-feature">
+                        <span class="feature-icon">✨</span>
+                        <span>100% risk-free</span>
+                    </div>
+                </div>
             </div>
-            
-            <form id="contact-form">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="name">Your Name *</label>
-                        <input type="text" id="name" name="name" required placeholder="John Smith">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address *</label>
-                        <input type="email" id="email" name="email" required placeholder="john@company.com">
-                    </div>
-                </div>
-                
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="business-type">Business Type *</label>
-                        <select id="business-type" name="business-type" required>
-                            <option value="">Select your business type</option>
-                            <option>E-commerce / Online Store</option>
-                            <option>Restaurant / Cafe</option>
-                            <option>Service Business (Plumbing, HVAC, etc)</option>
-                            <option>Professional Services (Law, Accounting)</option>
-                            <option>Health & Wellness</option>
-                            <option>Real Estate</option>
-                            <option>Creative / Portfolio</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                </div>
-                
-                <div class="form-group full-width">
-                    <label for="business-name">Business Name *</label>
-                    <input type="text" id="business-name" name="business-name" required placeholder="Your Company Name">
-                </div>
-                
-                <div class="form-group full-width">
-                    <label for="description">Business Description *</label>
-                    <textarea id="description" name="description" required placeholder="Tell us about your business in 2-3 sentences. What do you do? Who do you serve?"></textarea>
-                </div>
-                
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="primary-color">Primary Color *</label>
-                        <input type="text" id="primary-color" name="primary-color" required placeholder="#000000 or 'Navy Blue'">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="secondary-color">Secondary Color</label>
-                        <input type="text" id="secondary-color" name="secondary-color" placeholder="#FFD700 or 'Gold'">
-                    </div>
-                </div>
-                
-                <div class="form-group full-width">
-                    <label for="plan">Preferred Plan *</label>
-                    <select id="plan" name="plan" required>
-                        <option value="">Choose your plan</option>
-                        <option>Basic - $299 (Single page, 1 revision)</option>
-                        <option>Professional - $599 (5-8 pages, 2 revisions) - MOST POPULAR</option>
-                        <option>Premium - $999 (8-12 pages, full custom)</option>
-                        <option>Not sure yet</option>
-                    </select>
-                </div>
-                
-                <div class="form-group full-width">
-                    <label for="special-requests">Special Requests or Features</label>
-                    <textarea id="special-requests" name="special-requests" placeholder="Any specific features you need? Booking system, gallery, contact forms, etc."></textarea>
-                </div>
-                
-                <button type="submit" class="form-submit">Get My Free Website Preview →</button>
-                
-                <div class="form-guarantee">
-                    <strong>100% Risk-Free Guarantee:</strong> We'll build your website and show you a live preview. Only pay if you love it. No credit card required to start.
-                </div>
-            </form>
         </div>
     </section>
 
     <!-- Testimonials -->
-    <section class="testimonials">
+    <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-header">
                 <div class="section-badge">Success Stories</div>
@@ -263,7 +207,7 @@
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"I couldn't believe how fast they delivered. Filled out the form at 2pm, had my restaurant website preview by 3pm. Paid immediately because it was perfect. This is the future."</p>
+                    <p class="testimonial-text">"I couldn't believe how fast they delivered. Signed up at 2pm, had my restaurant website preview by 3pm. Paid immediately because it was perfect. This is the future."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">MC</div>
                         <div class="author-info">
@@ -275,7 +219,7 @@
                 
                 <div class="testimonial-card">
                     <div class="stars">★★★★★</div>
-                    <p class="testimonial-text">"As a plumber, I don't have time for complicated web stuff. This was literally the easiest thing I've ever done. Got a $600 website for my business in 45 minutes. Incredible."</p>
+                    <p class="testimonial-text">"As a plumber, I don't have time for complicated web stuff. This was literally the easiest thing I've ever done. Got a website for my business in 45 minutes. Incredible."</p>
                     <div class="testimonial-author">
                         <div class="author-avatar">JR</div>
                         <div class="author-info">
@@ -315,7 +259,7 @@
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        You fill out our form with your business details. We build your website using AI in under 60 minutes. You get a live preview link to see your actual website. If you love it, you choose a plan and pay. If you don't love it, you walk away - no charge, no obligation. It's completely risk-free.
+                        You sign up with your email. We build your website using AI in under 60 minutes. You get a live preview link to see your actual website. If you love it, you choose a plan and pay. If you don't love it, you walk away - no charge, no obligation. It's completely risk-free.
                     </div>
                 </div>
                 
@@ -365,7 +309,7 @@
                         <span class="faq-toggle">+</span>
                     </div>
                     <div class="faq-answer">
-                        Yes! Our Premium plan includes full e-commerce functionality. We can integrate payment processing, product catalogs, shopping carts, and checkout systems. Perfect for online stores.
+                        Yes! Our Enterprise plan includes full e-commerce functionality. We can integrate payment processing, product catalogs, shopping carts, and checkout systems. Perfect for online stores.
                     </div>
                 </div>
             </div>
@@ -376,7 +320,7 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-about">
-                <h3>WebForge<span>AI</span></h3>
+                <h3>VektorLabs<span>.ai</span></h3>
                 <p>The fastest, most risk-free way to get a professional website for your business. See it first. Love it. Then pay for it.</p>
                 <div class="social-links">
                     <a href="#" class="social-link" aria-label="Facebook">📘</a>
@@ -391,7 +335,7 @@
                 <ul>
                     <li><a href="#how">How It Works</a></li>
                     <li><a href="#pricing">Pricing</a></li>
-                    <li><a href="#examples">Examples</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#faq">FAQ</a></li>
                 </ul>
             </div>
@@ -417,7 +361,7 @@
         </div>
         
         <div class="footer-bottom">
-            <p>&copy; 2026 WebForge AI. All rights reserved. Built with AI, designed for humans.</p>
+            <p>&copy; 2026 VektorLabs.ai. All rights reserved. Built with AI, designed for humans.</p>
         </div>
     </footer>
 
